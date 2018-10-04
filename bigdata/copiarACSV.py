@@ -50,3 +50,21 @@ def traerColumnas(argv=None):
 	result = p.run()
 
 traerColumnas()
+
+#Propósito
+#Éste programa crea un archivo .csv a partir de otro archivo con las columnas
+#que le sean solicitadas del archivo de origen.
+
+#Modo de uso
+
+#Se llama al programa python pasandole los argumentos, un origen 
+#(archivo .csv) y un destino donde depositar los resultados.
+# $ python copiarACSV.py -in siete.csv -out salida/ejemplo
+
+#El programa creara el archivo de salida ejemplo.csv en la 
+#carpeta salida, con las columnas que usted selecione del 
+#archivo de origen.
+#Si llegara a presentar éste problema 
+# " ImportError: cannot import name fileio " 
+#visite https://stackoverflow.com/questions/46787428/python-from-apache-beam-io-import-fileio-gives-error-cannot-import-name-filei 
+#para su posterior solución.
