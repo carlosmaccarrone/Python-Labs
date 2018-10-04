@@ -45,7 +45,6 @@ def traerColumnas(argv=None):
 	        lambda x: ','.join( tuple(( x['Nombre de la Unidad Económica'].strip() ,
 	                           x['Número de teléfono'].strip()  ) )).encode('latin-1')       ))
 	
-	
 	DATOS | 'write' >> beam.io.WriteToText(known_args.output, file_name_suffix='.csv', shard_name_template='', header='Nombre de la Unidad Económica, Número de teléfono')
 
 	result = p.run()
