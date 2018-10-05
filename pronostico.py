@@ -1,5 +1,5 @@
 ## -*- coding: utf-8 -*-
-#Pronostico del tiempo en San Andrés, Buenos Aires
+#Pronóstico del tiempo en San Andrés, Buenos Aires
 #Carlos Esteban Maccarrone -cem- 2018
  
 import requests
