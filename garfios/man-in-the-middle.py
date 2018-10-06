@@ -1,6 +1,5 @@
 #! /usr/bin/env python
 ## -*- coding: latin-1 -*-
-#
 # ejecutar con sudo 
 # psrc=ip puerda enlace, pdst=ip destinatario, hwdst=mac inventada
 # al llegar a una estación siempre verifique su dirección mac
