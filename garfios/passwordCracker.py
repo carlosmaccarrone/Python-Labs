@@ -1,5 +1,3 @@
-#simple pw cracker
-
 import crypt
 
 def testPass(cryptPass):
