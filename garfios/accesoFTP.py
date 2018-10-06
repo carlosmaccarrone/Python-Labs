@@ -1,8 +1,6 @@
 # Este programa determina si un servidor ofrece
 # inicios de sesión anónimos
 
-#Acceso FTP anónimo
-
 import ftplib
 def anonLogin(hostname):
 	try:
