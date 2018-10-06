@@ -12,6 +12,7 @@ def testPass(cryptPass):
 	print "[-] Clave no encontrada.\n"
 	return
 
+
 def main():
 	passFile = open('/etc/shadow')
 	for line in passFile.readlines():
