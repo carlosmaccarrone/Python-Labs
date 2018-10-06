@@ -1,5 +1,3 @@
-#Este programa imprime la ubicacion fisica de una ip
-
 import pygeoip
 gi = pygeoip.GeoIP('/usr/share/GeoIP/GeoLiteCity.dat')
 
