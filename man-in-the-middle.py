@@ -2,7 +2,7 @@
 ## -*- coding: latin-1 -*-
 #
 # ejecutar con sudo 
-# psrc=ip puerda enlace, pdst=ip destinatario, hwdst=mac inventada
+# psrc=ip puerta enlace, pdst=ip destinatario, hwdst=mac inventada
 # al llegar a una estación siempre verifique su dirección mac
 # ARP Address Resolution Protocol
 from scapy.all import *
