@@ -27,4 +27,7 @@ for web in BeautifulSoup(respuesta[1], 'lxml').find_all('h3', class_='r'):
 # Éste programa buscará en google, y mostrará
 # los websites de los primeros diez resultados
 
+# Para acceder a los links desde él terminal
+# mantenga pulsado Ctrl y haga click sobre el link 
+
 # pip install httplib2 beautifulsoup4
