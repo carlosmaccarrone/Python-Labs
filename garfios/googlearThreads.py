@@ -66,7 +66,6 @@ for i in range(3):
     time.sleep(1)
 
 
-
 # Éste programa buscará en google, y mostrará
 # las primeras tres páginas de resultados
 
