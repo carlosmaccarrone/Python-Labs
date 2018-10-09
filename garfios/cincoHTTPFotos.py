@@ -1,3 +1,4 @@
+# Carlos Esteban Maccarrone -cem- 2018 
 import numpy as np
 import cv2, time, threading, base64
 from BaseHTTPServer import BaseHTTPRequestHandler, HTTPServer
@@ -37,3 +38,7 @@ if __name__ == '__main__':
 		server.serve_forever()
 	except KeyboardInterrupt:
 		server.socket.close()
+
+		
+# Este programa crea un servidor en localhost:8080 o 127.0.0.1:8080
+# y muestra cinco fotos capturadas al momento de correr	
