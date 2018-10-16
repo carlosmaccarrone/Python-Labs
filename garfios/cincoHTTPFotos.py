@@ -1,5 +1,4 @@
 # Carlos Esteban Maccarrone -cem- 2018 
-import numpy as np
 import cv2, time, threading, base64
 from BaseHTTPServer import BaseHTTPRequestHandler, HTTPServer
 
