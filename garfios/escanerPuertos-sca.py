@@ -2,7 +2,6 @@
 # Correr con sudo
 # Carlos Esteban Maccarrone -cem- 2018
 import threading
-
 from scapy.all import sr1, IP, TCP
 
 ESCANEARIP = '172.217.30.142'
