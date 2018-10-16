@@ -1,4 +1,5 @@
 ## -*- coding: utf-8 -*-
+# Correr con sudo
 # Carlos Esteban Maccarrone -cem- 2018
 import threading
 
