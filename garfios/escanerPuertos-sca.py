@@ -18,7 +18,8 @@ def estudiarPuerto(host, puerto, semaforo):
 
 		respuesta = sr1(IP(dst=host)/TCP(dport=puerto),\
 		 	verbose=False, timeout=0.2)
-		# URG	ACK		PSH		RST		SYN		FIN
+		
+		# URG	ACK		PSH		RST		SYNC		FIN
 		# 32	16		8		4		2		1
 		# 18 = ACK & SYNC
 
