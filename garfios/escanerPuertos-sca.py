@@ -21,8 +21,8 @@ def estudiarPuerto(host, puerto, semaforo):
 		# URG	ACK		PSH		RST		SYNC		FIN
 		# 32	16		8		4		2		1
 		# 18 = ACK & SYNC
-
-		if respuesta is not None and TCP in respuesta:
+		
+		if respuesta is not None and respuesta.haslayer(TCP):
 			if respuesta[TCP].flags == 18:
 				puertosAbiertos.append(puerto)
 				if REGLA > 1:
