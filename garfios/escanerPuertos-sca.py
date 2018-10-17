@@ -1,5 +1,4 @@
 ## -*- coding: utf-8 -*-
-# Correr con sudo
 # Carlos Esteban Maccarrone -cem- 2018
 import threading
 from scapy.all import sr1, IP, TCP
@@ -60,3 +59,4 @@ if __name__ == '__main__':
 # <1 no se escanean puertos
 # =1 se escanean puertos y no se muestran hasta terminar
 # >1 se escanean puertos y se muestran al instante
+# Correr con sudo
