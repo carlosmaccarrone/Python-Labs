@@ -20,8 +20,8 @@ def main():
     conf.verb = 0
     ipRouter = '192.168.1.1'
     redesIP = '192.168.1.0/24' # No modificar ésto, crashea srp()
-    #redesIP = '192.168.1.4'
-    interfaz = 'wlp3s0'
+    #redesIP = '192.168.1.4'   # Puede especificar un dispositivo en lugar de toda la red
+    interfaz = 'iface'         # Configure iface
 
     # Obtener MAC del router
     print "Obtener MAC del router"
@@ -66,8 +66,8 @@ def main():
     for i in xrange(0, len(ipsRed)):
         print "Dispositivo: IP = "+str(ipsRed[i])+" MAC = "+str(macsRed[i])
 
-    # Se envían peticiones ARP a los dispositivos sin que ellos la hayan solicitado
-    # Y así se envenena la cache de cada una
+    # Se envían respuestas ARP 'is-at' a los dispositivos sin que ellos la hayan solicitado
+    # o se envían peticiones ARP 'who-has'.
     try:
         while True:
             for i in xrange(0, len(ipsRed)):
