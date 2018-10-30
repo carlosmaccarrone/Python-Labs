@@ -12,10 +12,10 @@ def estudiarPuerto(host, puerto, semaforo):
 	if REGLA > 0:
 		print "[++] Analizando puerto %s " % puerto
 
-		# transmision control protocol handshaking
+		# transmision control protocol handshake
 		# 1)envío sync, 2)responde sync-ack, 3)envío ack
 
-		respuesta = sr1(IP(dst=host)/TCP(dport=puerto),\
+		respuesta = sr1(IP(dst=host)/TCP(dport=puerto, flags=2),\
 		 	verbose=False, timeout=0.2)
 		
 		# URG	ACK		PSH		RST		SYNC		FIN
@@ -42,7 +42,7 @@ def main():
 		threads.append(t)
 
 		# Semaforo en rojo, se debe poner en verde
-		# 							para lanzar otro thread
+		# 				para lanzar otro thread
 		sem.acquire()
 		t.start()
 
