@@ -44,7 +44,7 @@ def registroEscuchar(paquete):
 def main():
     conf.verb = 0
     ipRouter = '192.168.1.1'
-    redesIP = '192.168.1.0/24' #No tocar este campo porque crashea srp(), esperamos actualizaciones . . . 
+    redesIP = '192.168.1.0/24' # Se configura la mascara de subred con 8bit de classfull
     conf.iface = 'wlp3s0'
 
     print "\n[++]Obtener MAC del router"
