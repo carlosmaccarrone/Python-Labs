@@ -7,7 +7,7 @@ from xml.dom import minidom
 
 def traerURLdeNodos(nodo):
 	return ''.join([n.nodeValue for n in nodo.childNodes if n.nodeType == n.TEXT_NODE])
-									# Cambiar por el feed que guste
+					# Cambiar por el feed que guste
 doc = minidom.parse(urllib.urlopen('https://www.clarin.com/rss/politica/'))
 
 print '<h1>Python news</h1>'
