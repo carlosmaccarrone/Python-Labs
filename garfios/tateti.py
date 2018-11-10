@@ -98,7 +98,7 @@ def traerMovimientoPC(tablero, letraPC):
 			if esGanador(dup, letraPC):
 				return casilla
 
-	# Éste bucle checa en cada iteración con elTablero| que recibe la función
+	# Éste bucle checa en cada iteración con elTablero que recibe la función
 	# si el jugador haciendo un solo movimiento puede ganar, si es así  
 	# devuelve la casilla donde debe colocar la letra para bloquearlo.
 	# Notar que en cada iteración se debe duplicar elTablero porque se
@@ -126,13 +126,13 @@ def traerMovimientoPC(tablero, letraPC):
 def esGanador(ta, le):
 # Recibe el tablero y la letra del jugador/PC, devuelve True si el jugador/PC ganó.
 	return (	(ta[7] == le and ta[8] == le and ta[9] == le) or
-				(ta[4] == le and ta[5] == le and ta[6] == le) or
-				(ta[1] == le and ta[2] == le and ta[3] == le) or
-				(ta[7] == le and ta[4] == le and ta[1] == le) or
-				(ta[8] == le and ta[5] == le and ta[2] == le) or
-				(ta[9] == le and ta[6] == le and ta[3] == le) or
-				(ta[7] == le and ta[5] == le and ta[3] == le) or
-				(ta[9] == le and ta[5] == le and ta[1] == le)	)
+			(ta[4] == le and ta[5] == le and ta[6] == le) or
+			(ta[1] == le and ta[2] == le and ta[3] == le) or
+			(ta[7] == le and ta[4] == le and ta[1] == le) or
+			(ta[8] == le and ta[5] == le and ta[2] == le) or
+			(ta[9] == le and ta[6] == le and ta[3] == le) or
+			(ta[7] == le and ta[5] == le and ta[3] == le) or
+			(ta[9] == le and ta[5] == le and ta[1] == le)	)
 
 
 def seLlenoTablero(tablero):
