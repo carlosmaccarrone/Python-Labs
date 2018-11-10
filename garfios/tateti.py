@@ -154,7 +154,7 @@ while True:
 	elTablero = [' '] * 10
 	letraJugador, letraPC = asociarLetraJugador()
 	turno = quienVaPrimero()
-	print 'El ' + str(turno) + ' tiene el primer turno.'
+	print 'El ' + turno + ' tiene el primer turno.'
 	juegoEnCurso = True
 
 	while juegoEnCurso:
