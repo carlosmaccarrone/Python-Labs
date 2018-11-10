@@ -67,7 +67,7 @@ def traerTableroDuplicado(tablero):
 
 
 def movimientoAleatorioDeLista(tablero, casillas):
-# Devuelve un movimiento valido pasado de la lista
+# Devuelve un movimiento valido pasado de la lista de casillas.
 # Devuelve NoneType si no hay posibles movimientos.
 	posiblesMovimientos = []
 
@@ -91,6 +91,8 @@ def traerMovimientoPC(tablero, letraPC):
 	# Éste bucle checa en cada iteración con elTablero que recibe la función
 	# si haciendo un solo movimiento puede ganar, si es así devuelve la 
 	# casilla donde debe colocar la letra para ganar.
+	# Notar que en cada iteración se debe duplicar elTablero porque se
+	# simula un movimiento.
 	for casilla in range(1, 10):
 		dup = traerTableroDuplicado(tablero)
 		if esCasillaLibre(dup, casilla):
@@ -101,6 +103,8 @@ def traerMovimientoPC(tablero, letraPC):
 	# Éste bucle checa en cada iteración con elTablero| que recibe la función
 	# si el jugador haciendo un solo movimiento puede ganar, si es así  
 	# devuelve la casilla donde debe colocar la letra para bloquearlo.
+	# Notar que en cada iteración se debe duplicar elTablero porque se
+	# simula un movimiento.
 	for casilla in range(1, 10):
 		dup = traerTableroDuplicado(tablero)
 		if esCasillaLibre(dup, casilla):
