@@ -1,7 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 # https://www.clarin.com/rss.html
-
 import urllib
 from xml.dom import minidom
 
