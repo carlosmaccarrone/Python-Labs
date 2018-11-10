@@ -1,5 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
+# TA-TE-TI versión beta, próximamente se pensará una interfaz gráfica y conectividad P2P y cliente/servidor.
 import random
 
 
