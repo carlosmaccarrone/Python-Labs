@@ -22,7 +22,7 @@ def dibujarTablero(tablero):
 def asociarLetraJugador():
 	letra = ''
 	while not (letra == 'X' or letra == 'O'): 
-		letra = raw_input('Quiere ser X o O?').upper()
+		letra = raw_input('Quiere ser X o O? ').upper()
 
 	if letra == 'X':
 		return ['X', 'O']
@@ -47,7 +47,7 @@ def movimientoJugador(tablero):
 # sugestión: Haga su próximo movimiento
 	casilla = ' '
 	while casilla not in '1 2 3 4 5 6 7 8 9'.split() or not esCasillaLibre(tablero, int(casilla)):
-		casilla = raw_input('Haga su próximo movimiento(1-9)')
+		casilla = raw_input('Haga su próximo movimiento(1-9) ')
 	return int(casilla)
 
 
@@ -68,7 +68,7 @@ def traerTableroDuplicado(tablero):
 
 def movimientoAleatorioDeLista(tablero, casillas):
 # Devuelve un movimiento valido pasado de la lista de casillas.
-# Devuelve NoneType si no hay posibles movimientos.
+# Si no hay posibles movimientos la variable que llamó quedará NoneType.
 	posiblesMovimientos = []
 
 	for casilla in casillas:
@@ -77,8 +77,6 @@ def movimientoAleatorioDeLista(tablero, casillas):
 
 	if len(posiblesMovimientos) != 0:
 		return random.choice(posiblesMovimientos)
-	else:
-		return None
 
 
 def traerMovimientoPC(tablero, letraPC):
@@ -146,7 +144,7 @@ def seLlenoTablero(tablero):
 
 
 def jugarDeNuevo():
-	return raw_input('Quiere volver a intentar? (si o no)').lower().startswith('s')
+	return raw_input('Quiere volver a intentar? (si o no) ').lower().startswith('s')
 
 
 print 'TA-TE-TI by Carlitos'
