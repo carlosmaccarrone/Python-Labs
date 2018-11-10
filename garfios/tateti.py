@@ -21,9 +21,8 @@ def dibujarTablero(tablero):
 
 def asociarLetraJugador():
 	letra = ''
-	while not (letra == 'X' or letra == 'O'):
-		print 'Quiere ser X o O?'
-		letra = raw_input().upper()
+	while not (letra == 'X' or letra == 'O'): 
+		letra = raw_input('Quiere ser X o O?').upper()
 
 	if letra == 'X':
 		return ['X', 'O']
@@ -48,8 +47,7 @@ def movimientoJugador(tablero):
 # sugestión: Haga su próximo movimiento
 	casilla = ' '
 	while casilla not in '1 2 3 4 5 6 7 8 9'.split() or not esCasillaLibre(tablero, int(casilla)):
-		print 'Haga su próximo movimiento(1-9)'
-		casilla = raw_input()
+		casilla = raw_input('Haga su próximo movimiento(1-9)')
 	return int(casilla)
 
 
@@ -144,8 +142,7 @@ def seLlenoTablero(tablero):
 
 
 def jugarDeNuevo():
-	print 'Quiere volver a intentar? (si o no)'
-	return raw_input().lower().startswith('s')
+	return raw_input('Quiere volver a intentar? (si o no)').lower().startswith('s')
 
 
 print 'TA-TE-TI by Carlitos'
