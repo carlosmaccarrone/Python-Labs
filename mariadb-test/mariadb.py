@@ -2,11 +2,9 @@ import openpyxl
 import MySQLdb as mariadb
 from datetime import date
 
-
 doc = openpyxl.load_workbook('prueba.xlsx')
 pagina = doc.active
 cantfilas = pagina.max_row
-
 
 db = mariadb.connect(host= "127.0.0.1",
                     user="cmaccarrone",
@@ -40,6 +38,6 @@ for i in xrange(2, cantfilas+1):
                         data = data + ",'"+ str(pagina.cell(row = i, column = j).value) + "'"
                         #print(str(pagina.cell(row = i, column = j).value))
         ptr.execute(QUERY+data+');')
-        #print(QUERY+data+');')
+        #print str(QUERY)+str(data)+');'
 db.commit()
 db.close()
