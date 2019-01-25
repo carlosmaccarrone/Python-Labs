@@ -1,6 +1,5 @@
 import sqlite3
 
-
 db = sqlite3.connect('sqltest.db')
 ptr = db.cursor()
 QUERY="INSERT INTO test VALUES (NULL, "
