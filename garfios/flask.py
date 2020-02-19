@@ -15,7 +15,7 @@ if __name__ == '__main__' :
 
 
 
-# Éste programa visualiza en un website
+# Éste programa visualiza en un endpoint
 # un archivo cualquiera (txt, csv, etc),
 # creando un servidor flask en
 # 192.168.1.6:3267/verArchivo/<nombre del archivo>
