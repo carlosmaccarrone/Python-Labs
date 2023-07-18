@@ -19,7 +19,7 @@ def funcionDeEncriptamiento(elemento, clavePublica):
     fragmento = 470
     offset = 0
     fin_loop = False
-    cifrado =  ""
+    cifrado =  bytearray()
 
     while not fin_loop:
 
@@ -30,7 +30,7 @@ def funcionDeEncriptamiento(elemento, clavePublica):
         #Así que terminamos el bucle aquí.
         if len(porcion) % fragmento != 0:
             fin_loop = True
-            porcion += " " * (fragmento - len(porcion))
+            porcion += bytes(fragmento - len(porcion))
 
         # Agregue la porcion cifrada al archivo cifrado general
         cifrado += claveRSA.encrypt(porcion)
