@@ -16,7 +16,7 @@ def funcionParaDesencriptar(elemento, clavePrivada):
     # Los datos se descifrarán por porciones.
     fragmento = 512
     offset = 0
-    descifrado = ""
+    descifrado = bytearray()
 
     # El loop se ejecuta hasta que haya procesado toda la longitud del elemento
     while offset < len(elemento):
