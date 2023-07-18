@@ -8,12 +8,12 @@ claveNueva = RSA.generate(4096, e=65537)
 clavePrivada = claveNueva.exportKey("PEM")
 clavePublica = claveNueva.publickey().exportKey("PEM")
 
-print clavePrivada
+print(clavePrivada)
 archivo = open("ejemplo/clavePrivada.pem", "wb")
 archivo.write(clavePrivada)
 archivo.close()
 
-print clavePublica
+print(clavePublica)
 archivo = open("ejemplo/clavePublica.pem", "wb")
 archivo.write(clavePublica)
 archivo.close()
