@@ -10,3 +10,8 @@ evens = list(filter(lambda x: x % 2 == 0, numbers))
 
 print("Squares:", squares)
 print("Evens:", evens)
+
+
+squaresAgain = lambda x: x**2
+mapped_squares = [ squaresAgain(num) for num in numbers ]
+print("SquaresAgain:", mapped_squares)
