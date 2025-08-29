@@ -8,7 +8,7 @@ from pyspark.sql.functions import col, avg, count, hour
 spark = SparkSession.builder.getOrCreate()
 
 # Route to the uploaded CSV
-file_path = "/Workspace/Repos/carlosmaccarrone/Python-Labs/spark_demo/nyc_taxi_sample_10k.csv"
+file_path = "/Volumes/workspace/default/vol1/nyc_taxi_sample_10k.csv"
 
 # Read CSV with header and infer types
 df = spark.read.csv(file_path, header=True, inferSchema=True)
@@ -43,7 +43,7 @@ df.orderBy(col("trip_distance").desc()).show(5)
 # --------------------------------
 # Save results (optional)
 # --------------------------------
-avg_fare_by_hour.write.mode("overwrite").parquet("/FileStore/tables/output/avg_fare_by_hour.parquet")
-trips_by_hour.write.mode("overwrite").parquet("/FileStore/tables/output/trips_by_hour.parquet")
+avg_fare_by_hour.write.mode("overwrite").parquet("/Volumes/workspace/default/vol1/output/avg_fare_by_hour.parquet")
+trips_by_hour.write.mode("overwrite").parquet("/Volumes/workspace/default/vol1/output/trips_by_hour.parquet")
 
-print("\n✅ Demo completed. Results saved in /FileStore/tables/output/")
+print("\n Demo completed. Results saved in /Volumes/workspace/default/vol1/output/")
