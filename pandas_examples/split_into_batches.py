@@ -1,4 +1,3 @@
-
 # This function is a classic for handling large data in chunks without breaking up RAM.
 
 def split_into_batches(iterable, batch_size):
@@ -15,4 +14,3 @@ if __name__ == "__main__":
     # We want to process in batches of 5
     for i, batch in enumerate(split_into_batches(data, 5), start=1):
         print(f"Batch {i}: {batch}")
-
