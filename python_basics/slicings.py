@@ -3,7 +3,7 @@
 ##################
 print("STRING SLICING")
 text_string = "Hello world! how you doing?"
-print("My list: {}".format(text_string))
+print("My text: {}".format(text_string))
 
 # Word extract
 word = text_string[:5]
