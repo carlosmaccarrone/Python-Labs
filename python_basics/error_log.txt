@@ -1,8 +1,0 @@
-2025-08-09 19:37:06,010 - ERROR - Exception occurred
-Traceback (most recent call last):
-  File "C:\training\repos\Python\python_basics\basic_exception_logging.py", line 32, in main
-    example_function()
-    ~~~~~~~~~~~~~~~~^^
-  File "C:\training\repos\Python\python_basics\basic_exception_logging.py", line 27, in example_function
-    raise Exception("This is a controlled exception")
-Exception: This is a controlled exception
